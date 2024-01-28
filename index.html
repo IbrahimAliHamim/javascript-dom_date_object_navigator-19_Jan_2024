@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    .body{
+      font-family: 'Poppins', sans-serif; 
+    }
+  </style>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="../css/bootstrap.css">
+
+  <!-- google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,500;0,700;1,100&display=swap" rel="stylesheet">
+
+  <title>Document</title>
+</head>
+<body>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h1 id="myId" class="myClass">Bootstrap</h1>
+        <h1 class="myClass">JavaScript</h1>
+
+      </div>
+      <div class="col-12">
+        <img width="100" src="https://rabbil.com/files/rabbilVai.png" id="myImg" alt="">
+      </div>
+      <div class="col-12">
+        <ul id="myList">
+          <li>Bangladesh</li>
+          <li>India</li>
+        </ul>
+      </div>
+      <div class="col-12">
+        <p>Paragraph 0</p>
+        <p>Paragraph 1</p>
+        <p>Paragraph 2</p>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+  <script>
+
+    // JavaScript DOM Finding Elements
+    let a = document.getElementsByTagName("h1");
+    let b = document.getElementsByClassName("myClass");
+    let c = document.getElementById("myId");
+    // let a = document.querySelector("");
+
+    // console.log(c)
+
+    // JavaScript DOM:innerText Manipulation
+    // -----c.innerText = "innerText"
+
+    // JavaScript DOM:innerHTML Manipulation
+    // -----c.innerHTML = "<button> innerHTML </button>"
+
+    // JavaScript DOM: CSS Class Manipulation
+    c.classList.add("text-danger")
+    c.classList.remove("text-danger")
+    c.classList.add("text-warning")
+
+    // JavaScript DOM:Attribute Manipulation
+    let img = document.getElementById("myImg");
+    img.src= 'https://rabbil.com/files/5.png';
+    img.setAttribute('width', 300);
+
+    // JavaScript DOM: Create HTML Element
+    let myList = document.getElementById("myList");
+    let newItem= document.createElement('li');
+    newItem.innerText = 'Canada';
+    myList.appendChild(newItem);
+    
+    // JavaScript DOM : If we find multiple Element
+    let paragraph = document.getElementsByTagName('p');
+    paragraph[1].innerText = 'Paragraph 1 is changed'
+
+
+
+
+
+  </script>
+
+
+  <script src="../js/bootstrap.bundle.js"></script>
+  
+</body>
+</html>

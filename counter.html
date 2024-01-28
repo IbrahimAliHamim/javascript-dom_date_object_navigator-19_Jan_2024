@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    .body{
+      font-family: 'Poppins', sans-serif; 
+    }
+  </style>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="../css/bootstrap.css">
+
+  <!-- google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,500;0,700;1,100&display=swap" rel="stylesheet">
+
+  <title>Document</title>
+</head>
+<body>
+
+    <h1 id="countNumber">0</h1>
+    <button onclick="PlusFun()" id="plus" class="btn btn-primary align-self-center mr-3">Add</button>
+    <button onclick="MinFun()" id="minus" class="btn btn-warning align-self-center">Substruct</button>
+
+
+
+
+
+  <script>
+
+    function PlusFun(){
+      let countElement = document.getElementById("countNumber");
+      let currentNumber = parseInt(countElement.innerText);
+      currentNumber=currentNumber+1;
+      countElement.innerText=currentNumber;
+    }
+
+    function MinFun(){
+      let countElement = document.getElementById('countNumber');
+      let currentNumber = parseInt(countElement.innerText);
+      currentNumber = currentNumber - 1;
+      countElement.innerText = currentNumber;
+    }
+
+
+
+
+
+  </script>
+
+
+  <script src="../js/bootstrap.bundle.js"></script>
+  
+</body>
+</html>

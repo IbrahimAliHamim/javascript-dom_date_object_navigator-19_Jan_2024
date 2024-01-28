@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    .body{
+      font-family: 'Poppins', sans-serif; 
+    }
+  </style>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="../css/bootstrap.css">
+
+  <!-- google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,500;0,700;1,100&display=swap" rel="stylesheet">
+
+  <title>Document</title>
+</head>
+<body>
+
+  <p id="deviceInfo">
+
+  </p>
+
+  <p id="geoId"></p>
+
+
+
+
+
+
+
+
+  <script>
+    let appCodeName=navigator.appCodeName;
+    let appName=navigator.appName;
+    let appVersion=navigator.appVersion;
+    let cookieEnabled=navigator.cookieEnabled;
+    let userAgent=navigator.userAgent;
+    let platform=navigator.platform;
+    let onLine=navigator.onLine;
+
+    let deviceInfo = document.getElementById("deviceInfo");
+    deviceInfo.innerHTML=`appCodeName=${appCodeName}
+    </br> appName=${appName}
+    </br> appVersion=${appVersion}
+    </br> cookieEnabled=${cookieEnabled}
+    </br> userAgent=${userAgent}
+    </br> platform=${platform}
+    </br> onLine=${platform}
+    `
+
+
+    // ------Navigator Object : Geolocation
+    navigator.geolocation.getCurrentPosition(function(position){
+      let latitude=position.coords.latitude;
+      let longitude= position.coords.longitude;
+      let altitude= position.coords.altitude;
+
+      let geoId=document.getElementById('geoID');
+      geoID.innerHTML=`
+      <br/> latitude=${latitude}
+      <br/> longitude=${longitude}
+      <br/> altitude=${altitude}
+      `
+    })
+
+  </script>
+
+
+  <script src="../js/bootstrap.bundle.js"></script>
+  
+</body>
+</html>
